@@ -38,8 +38,7 @@ export async function main(event, context) {
     .publish({
       Message: JSON.stringify({ amount, description }),
       MessageStructure: "string",
-      //TopicArn: `note-purchased-${config.stage}`,
-      TopicArn: config.snsARN,
+      TopicArn: `note-purchased-${config.stage}`,
     })
     .promise();
 

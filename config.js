@@ -1,7 +1,6 @@
 const stage = process.env.stage;
 const resourcesStage = process.env.resourcesStage;
-const snsARN = process.env.notePurchasedTopicArn.Ref;
-const adminPhoneNumber = "+447706568682";
+const adminPhoneNumber = "+14151234567";
 
 const stageConfigs = {
   dev: {
@@ -18,6 +17,5 @@ export default {
   stage,
   resourcesStage,
   adminPhoneNumber,
-  snsARN,
   ...config
 };
