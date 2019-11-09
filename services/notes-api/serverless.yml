@@ -125,3 +125,9 @@ resources:
         Export:
           Name: ${self:custom.stage}-ExtApiGatewayRestApiRootResourceId
 
+      ApiGatewayResourceNotesIdVarId:
+        Value:
+          Ref: ApiGatewayResourceNotesIdVar
+        Export:
+          Name: ${self:custom.stage}-ExtApiGatewayResourceNotesIdVarId
+
