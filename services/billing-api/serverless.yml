@@ -29,7 +29,7 @@ provider:
     stage: ${self:custom.stage}
     resourcesStage: ${self:custom.resourcesStage}
     notePurchasedTopicArn:
-      Ref: NotePurchasedTopicArn
+      Ref: NotePurchasedTopic
 
   iamRoleStatements:
     - ${file(../../serverless.common.yml):lambdaPolicyXRay}
@@ -75,9 +75,7 @@ resources:
   Outputs:
     NotePurchasedTopicArn:
       Value:
-         Fn::GetAtt:
-          - NotePurchasedTopic
-          - Arn
+        Ref: NotePurchasedTopic
       Export:
         Name: ExtNotePurchasedTopicArn-${self:custom.stage}
 
