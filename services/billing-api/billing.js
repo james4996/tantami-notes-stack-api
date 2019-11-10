@@ -3,6 +3,7 @@ import stripePackage from "stripe";
 import { calculateCost } from "./libs/billing-lib";
 import { success, failure } from "../../libs/response-lib";
 import config from "../../config";
+import { eventNames } from "cluster";
 
 // Load our secret key from SSM
 const ssm = new AWS.SSM();
@@ -38,7 +39,7 @@ export async function main(event, context) {
     .publish({
       Message: JSON.stringify({ amount, description }),
       MessageStructure: "string",
-      TopicArn: `note-purchased-${config.stage}`,
+      TopicArn: process.env.notePurchasedTopicArn,
     })
     .promise();
 
