@@ -3,6 +3,7 @@ import config from "../../config";
 
 export async function main(event, context) {
   // Parse SNS data
+  console.log("SMS Activated");
   const { amount, description } = JSON.parse(event.Records[0].Sns.Message);
 
   const sns = new AWS.SNS();
