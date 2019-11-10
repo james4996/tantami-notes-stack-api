@@ -31,5 +31,4 @@ functions:
     handler: notify.main
     events:
       - sns:
-        'Fn::ImportValue': ExtNotePurchasedTopicArn-${self:custom.stage}
-
+        arn: arn:aws:sns:eu-west-1:466775288839:note-purchased-dev
