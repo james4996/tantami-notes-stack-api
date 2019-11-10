@@ -29,7 +29,7 @@ provider:
     stage: ${self:custom.stage}
     resourcesStage: ${self:custom.resourcesStage}
     notePurchasedTopicArn:
-      Ref: SNSTopicNotePurchasedTopic
+      Ref: NotePurchasedTopic
 
   iamRoleStatements:
     - ${file(../../serverless.common.yml):lambdaPolicyXRay}
