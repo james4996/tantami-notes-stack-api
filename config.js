@@ -1,6 +1,6 @@
 const stage = process.env.stage;
 const resourcesStage = process.env.resourcesStage;
-const adminPhoneNumber = "+14151234567";
+const adminPhoneNumber = "+447706568682";
 
 const stageConfigs = {
   dev: {
